@@ -92,3 +92,21 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+
+;; Neovim's Telescope like functionality
+;; ref: https://www.reddit.com/r/emacs/comments/sbh6hi/how_to_define_my_own_embark_functionkeymap_in/
+(defun cust/vsplit-file-open (f)
+  (let ((evil-vsplit-window-right t))
+    (+evil/window-vsplit-and-follow)
+    (find-file f)))
+
+(defun cust/split-file-open (f)
+  (let ((evil-split-window-below t))
+    (+evil/window-split-and-follow)
+    (find-file f)))
+
+(map! :after embark
+      :map embark-file-map
+      "V" #'cust/vsplit-file-open
+      "X" #'cust/split-file-open)
