@@ -35,9 +35,9 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
-(setq doom-font (font-spec :family "JetBrains Mono" :size 15)
-      doom-big-font (font-spec :family "jetBrains Mono" :size 24)
-      doom-variable-pitch-font (font-spec :family "Overpass" :size 15)
+(setq doom-font (font-spec :family "JetBrains Mono" :size 12.0)
+      doom-big-font (font-spec :family "jetBrains Mono" :size 20.0)
+      doom-variable-pitch-font (font-spec :family "Overpass" :size 12.0)
       doom-unicode-font (font-spec :family "JuliaMono")
       doom-serif-font (font-spec :family "IBM Plex Mono" :weight 'light))
 ;;
